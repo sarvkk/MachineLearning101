@@ -1,61 +1,62 @@
-# Simple Linear Regression Implementation
+# Simple and Multiple Linear Regression Implementation
 
-A lightweight implementation of Linear Regression from scratch using NumPy. This project provides a simple yet educational approach to understanding the fundamentals of linear regression and gradient descent.
+A lightweight implementation of **Linear Regression** from scratch using NumPy, along with a **Multiple Linear Regression** model using Scikit-Learn. This project provides an educational approach to understanding the fundamentals of regression, gradient descent, and evaluation metrics.
 
 ## Features
 
-- Custom implementation of Linear Regression using gradient descent
+- Custom implementation of **Simple Linear Regression** using gradient descent
+- Multiple Linear Regression implementation using **Scikit-Learn**
 - Configurable learning rate and convergence criteria
 - R-squared (R²) score calculation
 - Visualization tools for model fitting and prediction
 - Convergence tracking
-- Pure NumPy implementation (no scikit-learn dependency)
+- **Pure NumPy implementation** (for Simple Linear Regression, without Scikit-Learn dependency)
+- **Scikit-Learn-based implementation** for Multiple Linear Regression
 
 ## Requirements
 
+```
 python
 numpy>=1.19.0
 matplotlib>=3.3.0
+scikit-learn>=0.24.0
+seaborn>=0.11.0
+pandas>=1.2.0
+```
 
 ## Installation
 
 Clone this repository:
 
-bash
-git clone https://github.com/sarvkk/linear-regression.git
-cd linear-regression
+```bash
+git clone https://github.com/sarvkk/MachineLearning101.git
+
+```
 
 ## Usage
 
-Here's a simple example of how to use the implementation:
+### Simple Linear Regression (Custom Implementation)
 
-python
-from linear_regression import simple_LinReg
-import numpy as np
+1. Prepare your dataset
+2. Create and train the model
+3. Make predictions
+4. Visualize results
 
-Prepare your data
+### Multiple Linear Regression (Using Scikit-Learn)
 
-X = np.array([1, 2, 3, 4, 5])
-y = np.array([2.1, 4.2, 6.1, 8.3, 9.9])
-
-Create and train the model
-
-model = simple_LinReg(lr=0.01, max_iter=2000, threshold=1e-6)
-loss_history = model.fit(X, y)
-
-Make predictions
-
-predictions = model.predict(X)
-
-Visualize results
-
-model.plot(X, y)
+1. Load dataset
+2. Perform feature engineering
+3. Split the dataset into training and testing sets
+4. Train the model
+5. Make predictions
+6. Evaluate performance
 
 ## Parameters
 
-- `lr` (float): Learning rate for gradient descent (default: 0.01)
-- `max_iter` (int): Maximum number of iterations for gradient descent (default: 2000)
-- `threshold` (float): Convergence threshold for loss change (default: 1e-6)
+- **Simple Linear Regression**
+  - `lr` (float): Learning rate for gradient descent (default: 0.01)
+  - `max_iter` (int): Maximum number of iterations for gradient descent (default: 2000)
+  - `threshold` (float): Convergence threshold for loss change (default: 1e-6)
 
 ## Methods
 
@@ -73,13 +74,12 @@ The `plot` method generates a visualization showing:
 - Labeled axes and title
 - Grid for better readability
 
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-
 ## Acknowledgments
 
 - This implementation is meant for educational purposes
-- Inspired by the need for a simple, understandable linear regression implementation
+- Inspired by the need for a simple, understandable regression implementation
+
