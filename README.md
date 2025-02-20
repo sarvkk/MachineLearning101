@@ -1,7 +1,8 @@
 Machine Learning Algorithms
 ===========================
 
-This repository contains implementations for various machine learning algorithms, including **Simple Linear Regression**, **Custom Logistic Regression**, **Decision Tree Classifier**, **Random Forest Classifier**, and **Naive Bayes Classifier**. Each algorithm is implemented in a simple and understandable way, complete with visualizations to help you track model performance.
+This repository contains implementations for various machine learning algorithms, including **Simple Linear Regression**, **Custom Logistic Regression**, **Decision Tree Classifier**, 
+**KMeans Clustering**, ,**Random Forest Classifier**, and **Naive Bayes Classifier**. Each algorithm is implemented in a simple and understandable way, complete with visualizations to help you track model performance.
 
 Algorithms and Parameters
 -------------------------
@@ -140,6 +141,36 @@ _Built on top of the DecisionTree class, this classifier implements an ensemble 
         
     *   Displays the accuracy score for model performance.
         
+### K-Means Clustering
+
+*   **Parameters:**
+    
+    *   **K (int)**: Number of clusters to form (default: 5).
+    *   **max_iters (int)**: Maximum number of iterations for convergence (default: 100).
+    *   **plot_steps (bool)**: Whether to visualize clustering progress at each iteration (default: False).
+        
+*   **Methods:**
+    
+    *   **predict(X)**: Fit the K-Means model on input data and assign cluster labels.
+    *   **_create_clusters(centroids)**: Assigns each sample to the nearest centroid to create clusters.
+    *   **_closest_centroids(sample, centroids)**: Finds the nearest centroid for a given sample.
+    *   **_get_centroids(clusters)**: Computes new centroid positions as the mean of assigned samples.
+    *   **_is_converged(centroids_old, centroids)**: Checks if centroids have converged.
+    *   **_get_cluster_labels(clusters)**: Assigns labels to each data point based on their cluster.
+        
+*   **Distance Function:**
+    
+    *   **euclidean_distance(x1, x2)**: Computes the Euclidean distance between two points.
+        
+*   **Visualization & Evaluation:**
+    
+    *   **plot()**: Displays the clustered data points with centroids.
+        
+    *   **Visualization Details:**
+        
+        *   **Colored Scatter Points**: Data points colored according to cluster assignment.
+        *   **Black "X" Markers**: Cluster centroids.
+        *   **Dynamic Updates**: If `plot_steps=True`, updates the plot at each iteration.
 
 Contributing
 ------------
